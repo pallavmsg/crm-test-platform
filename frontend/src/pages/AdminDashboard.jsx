@@ -108,32 +108,29 @@ const AdminDashboard = () => {
             <div style={{ width: '280px', background: 'var(--surface)', borderRight: '1px solid var(--border)', padding: '2rem' }}>
                 <h2 style={{ color: 'var(--primary)', marginBottom: '3rem', fontSize: '1.5rem', fontWeight: '800' }}>IdealIt <span style={{ color: 'white' }}>Admin</span></h2>
 
-                <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <nav className="sidebar-nav">
                     <button
                         onClick={() => setActiveTab('tests')}
-                        className={`btn ${activeTab === 'tests' ? 'btn-primary' : ''}`}
-                        style={{ justifyContent: 'flex-start', background: activeTab === 'tests' ? '' : 'transparent' }}
+                        className={`sidebar-nav-item ${activeTab === 'tests' ? 'active' : ''}`}
                     >
                         <FilePlus size={20} /> Tests
                     </button>
                     <button
                         onClick={() => setActiveTab('users')}
-                        className={`btn ${activeTab === 'users' ? 'btn-primary' : ''}`}
-                        style={{ justifyContent: 'flex-start', background: activeTab === 'users' ? '' : 'transparent' }}
+                        className={`sidebar-nav-item ${activeTab === 'users' ? 'active' : ''}`}
                     >
                         <Users size={20} /> Candidates
                     </button>
                     <button
                         onClick={() => setActiveTab('results')}
-                        className={`btn ${activeTab === 'results' ? 'btn-primary' : ''}`}
-                        style={{ justifyContent: 'flex-start', background: activeTab === 'results' ? '' : 'transparent' }}
+                        className={`sidebar-nav-item ${activeTab === 'results' ? 'active' : ''}`}
                     >
                         <BarChart size={20} /> Results
                     </button>
                 </nav>
 
                 <div style={{ marginTop: 'auto', paddingTop: '2rem' }}>
-                    <button onClick={logout} className="btn" style={{ color: 'var(--error)', width: '100%', justifyContent: 'flex-start' }}>
+                    <button onClick={logout} className="logout-btn">
                         <LogOut size={20} /> Logout
                     </button>
                 </div>
