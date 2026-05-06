@@ -106,7 +106,7 @@ const AdminDashboard = () => {
         <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--background)' }}>
             {/* Sidebar */}
             <div style={{ width: '280px', background: 'var(--surface)', borderRight: '1px solid var(--border)', padding: '2rem' }}>
-                <h2 style={{ color: 'var(--primary)', marginBottom: '3rem', fontSize: '1.5rem', fontWeight: '800' }}>IdealIt <span style={{ color: 'white' }}>Admin</span></h2>
+                <h2 style={{ color: 'var(--primary)', marginBottom: '3rem', fontSize: '1.5rem', fontWeight: '800' }}>TestFlow <span style={{ color: 'var(--text)' }}>Admin</span></h2>
 
                 <nav className="sidebar-nav">
                     <button

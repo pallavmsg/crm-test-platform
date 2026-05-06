@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# IdealIt Test Platform - One-Click Launcher
+# TestFlow - One-Click Launcher
 
 echo "------------------------------------------------"
-echo "Starting IdealIt Offline Test Platform..."
+echo "Starting TestFlow..."
 echo "------------------------------------------------"
 
 # Get the script directory
@@ -23,7 +23,7 @@ sleep 2
 echo "[2/2] Launching Frontend Interface..."
 cd "$DIR/frontend"
 # Export path for Node/NPM
-export PATH=/home/pallav-ideal-62/.local/share/fnm/node-versions/v25.2.1/installation/bin:$PATH
+export PATH=/home/$USER/.local/share/fnm/node-versions/v25.2.1/installation/bin:$PATH
 npm run dev -- --host --port 5173 > frontend.log 2>&1 &
 FRONTEND_PID=$!
 

@@ -133,7 +133,7 @@ const TestExecution = () => {
                     <Maximize size={80} style={{ color: 'var(--primary)', marginBottom: '2.5rem', opacity: 0.8 }} />
                     <h2 style={{ fontSize: '2.25rem', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Action Required</h2>
                     <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '540px', fontSize: '1.1rem', lineHeight: '1.6' }}>
-                        To maintain a distraction-free and secure testing environment for <strong style={{ color: 'var(--text)' }}>IdealIt Techno</strong>, this assessment requires full-screen mode.
+                        To maintain a distraction-free and secure testing environment for <strong style={{ color: 'var(--text)' }}>TestFlow</strong>, this assessment requires full-screen mode.
                     </p>
                     <button onClick={enterFullscreen} className="btn btn-primary" style={{ padding: '1.25rem 4rem', fontSize: '1.2rem' }}>
                         Initialize Full-Screen
@@ -157,7 +157,7 @@ const TestExecution = () => {
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: '800', letterSpacing: '-0.02em' }}>
-                        IdealIt <span style={{ color: 'var(--primary)' }}>Techno</span>
+                        TestFlow
                     </div>
                     <div style={{ height: '24px', width: '1px', background: 'var(--border)' }}></div>
                     <div>
@@ -174,7 +174,7 @@ const TestExecution = () => {
                     background: questionTimeLeft < 10 ? 'rgba(239, 68, 68, 0.1)' : 'rgba(99, 102, 241, 0.05)',
                     borderRadius: '50px',
                     color: questionTimeLeft < 10 ? 'var(--error)' : 'var(--primary)',
-                    border: '1px solid rgba(255, 255, 255, 0.05)',
+                    border: '1px solid var(--border)',
                     fontWeight: '700'
                 }}>
                     <Clock size={20} />
@@ -205,8 +205,9 @@ const TestExecution = () => {
                                     gap: '1.5rem',
                                     padding: '1.5rem',
                                     borderRadius: '1rem',
-                                    background: answers[currentQuestion.id] === opt ? 'rgba(99, 102, 241, 0.1)' : 'rgba(255, 255, 255, 0.02)',
-                                    border: `1.5px solid ${answers[currentQuestion.id] === opt ? 'var(--primary)' : 'rgba(255, 255, 255, 0.05)'}`,
+                                    background: answers[currentQuestion.id] === opt ? 'rgba(139, 92, 246, 0.05)' : 'var(--surface)',
+                                    border: `1.5px solid ${answers[currentQuestion.id] === opt ? 'var(--primary)' : 'var(--border)'}`,
+                                    boxShadow: answers[currentQuestion.id] === opt ? '0 4px 12px rgba(139, 92, 246, 0.15)' : '0 2px 5px rgba(0,0,0,0.02)',
                                     cursor: 'pointer',
                                     transition: 'all 0.2s',
                                 }}
@@ -247,7 +248,7 @@ const TestExecution = () => {
                 </div>
 
                 <p style={{ marginTop: '2.5rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                    <Shield size={14} /> Powered by IdealIt Techno Security Engine
+                    <Shield size={14} /> Powered by TestFlow Security Engine
                 </p>
             </div>
         </div>

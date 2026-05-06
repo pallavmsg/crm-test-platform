@@ -17,7 +17,7 @@ const Results = () => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'radial-gradient(circle at center, #1e293b 0%, #0f172a 100%)',
+            background: 'var(--background)',
             padding: '2rem'
         }}>
             <div className="glass-card animate-fade-in" style={{
@@ -45,7 +45,7 @@ const Results = () => {
                 <div style={{ marginBottom: '3rem' }}>
                     <h1 style={{ fontSize: '2.5rem', marginBottom: '0.75rem', fontWeight: '700' }}>Assessment Complete</h1>
                     <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '400px', margin: '0 auto' }}>
-                        Thank you, {user?.full_name || 'Candidate'}. Your performance data has been securely synchronized with the **IdealIt Techno** database.
+                        Thank you, {user?.full_name || 'Candidate'}. Your performance data has been securely synchronized with the **TestFlow** database.
                     </p>
                 </div>
 
@@ -55,13 +55,13 @@ const Results = () => {
                     gap: '1.5rem',
                     marginBottom: '3.5rem'
                 }}>
-                    <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '2rem', borderRadius: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                    <div style={{ background: 'var(--surface)', padding: '2rem', borderRadius: '1.25rem', border: '1px solid var(--border)', boxShadow: 'var(--shadow-lg)' }}>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>Final Score</p>
                         <h3 style={{ fontSize: '3rem', fontWeight: '700', color: 'var(--primary)' }}>
                             {score}<span style={{ fontSize: '1.25rem', color: 'var(--text-muted)', fontWeight: '400' }}>/{totalMarks}</span>
                         </h3>
                     </div>
-                    <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '2rem', borderRadius: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                    <div style={{ background: 'var(--surface)', padding: '2rem', borderRadius: '1.25rem', border: '1px solid var(--border)', boxShadow: 'var(--shadow-lg)' }}>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.75rem' }}>Accuracy</p>
                         <h3 style={{ fontSize: '3rem', fontWeight: '700', color: percentage >= 70 ? 'var(--success)' : 'var(--warning)' }}>
                             {Math.round(percentage)}<span style={{ fontSize: '1.25rem', fontWeight: '400', opacity: 0.6 }}>%</span>
@@ -100,7 +100,7 @@ const Results = () => {
                 </div>
 
                 <div style={{ marginTop: '4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.8rem', opacity: 0.5 }}>
-                    &copy; 2025 IdealIt Techno &bull; Professional Assessment Series
+                    &copy; 2025 TestFlow &bull; Professional Assessment Series
                 </div>
             </div>
         </div>

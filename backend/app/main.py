@@ -17,7 +17,12 @@ app = FastAPI(title=settings.PROJECT_NAME)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # In production, restrict this
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:5174"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,7 +34,7 @@ app.include_router(candidate.router, prefix=f"{settings.API_V1_STR}/candidate", 
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to IdealIt Test Platform API"}
+    return {"message": "Welcome to TestFlow API"}
 
 def init_db():
     from app.db.session import SessionLocal

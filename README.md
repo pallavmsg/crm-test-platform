@@ -1,4 +1,4 @@
-# IdealIt Test Platform (Offline)
+# TestFlow (Offline)
 
 An offline examination platform for conducting MCQ-based aptitude tests.
 
